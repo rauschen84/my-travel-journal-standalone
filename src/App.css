@@ -34,20 +34,20 @@ h1 {
   padding: 1rem;
   background: #f9f9f9;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
-.entry-card img {
-  max-width: 200px;
-  margin-right: 0.5rem;
-  border-radius: 4px;
-}
-
+/* Image section of the entry */
 .images {
-  margin-left: 2vw;
+  flex: 1.2;
+  max-width: 50%;
 }
 
+/* Text section of the entry */
 .description {
-  margin-right: 2vw;
+  flex: 1.8;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
