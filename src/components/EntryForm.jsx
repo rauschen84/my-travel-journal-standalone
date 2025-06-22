@@ -7,7 +7,7 @@ export default function EntryForm({ onSubmit, initialData }) {
     country: "",
     arrivalDate: "",
     departureDate: "",
-    thoughts: "",
+    description: "",
     images: []
   });
 
@@ -31,7 +31,7 @@ export default function EntryForm({ onSubmit, initialData }) {
     e.preventDefault();
     if (formData.location && formData.country) {
       onSubmit(formData);
-      setFormData({ id: null, location: "", country: "", thoughts: "", images: [] });
+      setFormData({ id: null, location: "", country: "", description: "", images: [] });
     }
   };
 
@@ -70,10 +70,10 @@ export default function EntryForm({ onSubmit, initialData }) {
         />
       </label>
       <textarea
-        name="thoughts"
-        value={formData.thoughts}
+        name="description"
+        value={formData.description}
         onChange={handleChange}
-        placeholder="Your thoughts"
+        placeholder="Description"
       />
       <input
         type="file"

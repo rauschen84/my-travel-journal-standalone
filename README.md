@@ -1,24 +1,26 @@
 # 🌍 My Travel Journal
 
 A simple, elegant React app to document and relive your travels. Create, view, update, and delete journal entries for locations you've visited — including dates, descriptions, and an image carousel to showcase your best moments.
-
+Now enhanced with **real-time weather info** and a **clickable Google Maps link** for every location.
 Deployed with Vercel — no setup needed!
 
 ## 🔗 Live Demo
 
-👉 [Try the app here](https://my-travel-journal-chi.vercel.app/)
+👉 [Try the app here](https://my-travel-journal-standalone.vercel.app/)
 
 ---
 
 ## ✨ Features
 
-- ✅ Add new travel entries with location, country, dates, and thoughts
+- ✅ Add new travel entries with location, country, dates, and description
+- 🌦️ Display **real-time weather** for each destination using OpenWeatherMap API
+- 🗺️ Clickable **Google Maps** link for quick access to location
 - 🖼️ Upload **multiple images** per entry with a built-in carousel
 - ✏️ Edit existing entries
 - 🗑️ Delete entries
 - 💾 Persistent storage using `localStorage`
 - 📅 Arrival and departure date tracking
-- 🧼 Clean UI with custom CSS (no frameworks)
+- 🧼 Clean, responsive UI with custom CSS (no frameworks)
 
 ---
 
@@ -28,6 +30,8 @@ my-travel-journal/<br>
 ├── public/<br>
 │ └── images/ # sample images<br>
 ├── src/<br>
+│ ├── utils/<br>
+│ │ └── weather.js<br>
 │ ├── components/<br>
 │ │ ├── Carousel.css<br>
 │ │ ├── Carousel.jsx<br>
@@ -52,8 +56,8 @@ Clone the repo and run it locally:
 
 ```bash
 
-git clone https://github.com/rauschen84/my-travel-journal.git
-cd my-travel-journal
+git clone https://github.com/rauschen84/my-travel-journal-standalone.git
+cd my-travel-journal-standalone
 npm install
 npm run dev
 ```
@@ -68,19 +72,23 @@ Then open http://localhost:5173 in your browser.
 
 - Vite
 
-- Vercel for deployment
+- OpenWeatherMap API
+
+- Google Maps (via dynamic search URL)
 
 - Vanilla CSS (no Tailwind, Bootstrap, or UI libraries)
+
+- Vercel for deployment
 
 ---
 
 ## 💡 Future Enhancements
 
-- Weather API integration (fetch real-time weather for each location)
+- 🕰️ Backend weather integration to show past weather data based on travel dates
 
-- Dark mode toggle
+- 🌗 Dark mode toggle
 
-- Google Maps integration
+- 📍 Interactive embedded Google Maps view
 
 ---
 

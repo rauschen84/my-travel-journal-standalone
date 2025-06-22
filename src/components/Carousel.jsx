@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Carousel.css";
 
 export default function Carousel({ images }) {
+  
   const [current, setCurrent] = useState(0);
 
   if (!images || images.length === 0) return null;
